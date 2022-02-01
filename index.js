@@ -1,4 +1,5 @@
 
+
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
@@ -37,6 +38,11 @@ function addTodo(e) {
   trashButton.innerHTML = `<i class="fas fa-trash"></i>`;
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
+
+  const editButton= document.createElement("button");
+  editButton.innerHTML=`<i class="fa-regular fa-pen"></i>`;
+  editButton.classList.add("edit-btn");
+  todoDiv.appendChild(editButton);
   
   todoList.appendChild(todoDiv);
 }
@@ -109,6 +115,11 @@ function getTodos() {
     completedButton.innerHTML = `<i class="fas fa-check"></i>`;
     completedButton.classList.add("complete-btn");
     todoDiv.appendChild(completedButton);
+    //Edit button
+    const editButton= document.createElement1("button");
+    editButton.innerHTML=`<i class="fa-regular fa-pen"></i>`
+    editButton.classList.add("edit-btn");
+
     //Create trash button
     const trashButton = document.createElement("button");
     trashButton.innerHTML = `<i class="fas fa-trash"></i>`;
